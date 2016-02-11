@@ -5,3 +5,5 @@ function! EyamlDecrypt()
   echo ""
 endfunction
 nnoremap <leader>ey :call EyamlDecrypt()<cr>
+set comments=:#
+set commentstring=#%s
