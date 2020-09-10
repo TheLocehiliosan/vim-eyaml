@@ -5,5 +5,7 @@ function! EyamlDecrypt()
   echo ""
 endfunction
 nnoremap <leader>ey :call EyamlDecrypt()<cr>
+nnoremap <leader>eY :w!<cr>:-tab terminal ++close eyaml edit %<cr>
+vnoremap <leader>ey c<C-R>=system('eyaml encrypt -o string --stdin', getreg('"'))[:-2]<CR><esc>
 set comments=:#
 set commentstring=#%s
